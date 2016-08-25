@@ -50,6 +50,7 @@
 
 -(void)addScrollviews{
     
+    //因为先加bigTableView后加smallScrollView才不至于让bigTableView的section header把smallScrollView挡住
     bigTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, CGRectGetWidth(self.view.frame), SCROLLVIEW_HEIGHT+SECTION_HEADER_HEIGHT) style:UITableViewStylePlain];
     [self.view addSubview:bigTableView];
    
